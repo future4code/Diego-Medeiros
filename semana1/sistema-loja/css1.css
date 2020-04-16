@@ -1,0 +1,45 @@
+* {
+    margin: 0px;
+    background-color: #1B478A;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    background-color: #D8D8D8;
+    padding: 20px;
+    color: black;
+}
+
+.footer {
+    background-color: #D8D8D8;
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
+    text-align: center;
+    color: black;
+    padding: 30px;
+}
+
+.msg_boasvindas {
+    margin-left:500px;
+    color: black;
+}
+
+.fonte_menu {
+    font-size: 50px;
+    margin-left: 40px;
+}
+
+.posicao_tabela {
+    margin-top: 100px;
+}
+
+.imagem {
+    width: 30%;
+    height: 30%;
+}
+
+.margens {
+    margin-top:30px;
+}
