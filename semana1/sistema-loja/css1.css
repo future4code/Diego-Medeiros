@@ -1,0 +1,89 @@
+* {
+    margin: 0px;
+    background-color: #1B478A;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    background-color: #D8D8D8;
+    padding: 20px;
+    color: black;
+}
+
+.footer {
+    background-color: #D8D8D8;
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
+    text-align: center;
+    color: black;
+    padding: 30px;
+}
+
+.msg_boasvindas {
+    margin-left:500px;
+    color: black;
+}
+
+.fonte_menu {
+    font-size: 50px;
+    margin-left: 40px;
+}
+
+.posicao_tabela {
+    margin-top: 100px;
+}
+
+.imagem_index {
+    width: 30%;
+    height: 30%;
+}
+
+.margens {
+    margin-top:30px;
+    height: auto;
+}
+
+.imagens_controle {
+    height:100%;
+    width:100%
+}
+
+.posicao_tabelacontrole {
+    margin-bottom: 100px;
+}
+
+a:hover {
+    color:green;
+}
+
+a:active {
+    color: red;
+}
+
+
+
+input:focus {
+    color:white;
+    background-color: black;
+}
+
+
+input {
+    background-color: white;
+}
+
+button {
+    background-color: grey;
+}
+button:hover {
+    color: black;
+}
+
+button:active {
+    color: red;
+}
+
+
+
