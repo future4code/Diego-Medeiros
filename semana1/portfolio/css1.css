@@ -1,8 +1,146 @@
 * {
-    background-color:grey;
+    margin:0px;
+    background-color: grey;
+}
+
+h1 {
+    text-align: center;
+}
+
+div.footer {
+    background-color: black;
+    position: fixed;
+    bottom:0px;
+    padding:50x;
+    width: 100vw;
+    color:white;
+    
 }
 
 img {
-    width: 30%;
-    height: 30%;
+    width: 10%;
+    height: 10%;
+    background-color: black;
+}
+
+
+div.divtopo  {
+    background-color: black;
+    text-align: right;
+    font-size: 30px;
+    
+   
+}
+
+a:link, a:visited, input, textarea {
+    text-decoration: none;
+    color: white;
+}
+
+a, input, textarea {
+    background-color: black;
+}
+
+a:hover {
+    background-color: yellowgreen;
+}
+
+.divimagem2 {
+    
+    float:left;
+    border-radius: 30%;
+    box-shadow: 2px 2px Black
+    
+}
+
+td {
+    background-color: black;
+}
+table {
+    background-color:black;
+    display: inline;
+}
+
+.icone {
+    width:50px;
+    height:50px;
+}
+
+.descricao {
+    margin-top: 50px;;
+    margin-left: 200px;
+    margin-right: 30px;
+    text-align: justify;
+    text-indent: 40px;
+    
+   
+}
+
+.tabela_ensino {
+    margin:400px;
+}
+
+.tabela_empresas {
+    margin:40px;
+}
+
+.imagem_grande {
+    width: 50%;
+    height: 50%;
+}
+.imagem_ati {
+    width: 50%;
+    height: 50%;
+}
+.imagem_msb {
+    width: 50%;
+    height: 50%;
+}
+
+.margem_lista_index {
+    margin-left: 190px;
+}
+
+button {
+    background-color: yellowgreen;
+}
+ form {
+     margin-top: 40px;
+ }
+
+ .imagem_projeto_loja {
+     display:block;
+     width:50%;
+ }
+
+ .imagem_projeto_seletivo {
+     display:block;
+     width:50%;
+ }
+
+ .imagem_projeto_seletivo1 {
+   
+    display:block;
+    width:60%;
+}
+
+.margem_lista {
+    margin-bottom: 400px;
+}
+
+.lista {
+    background-color: transparent;
+}
+
+.imagem_projeto_loja1 {
+    width: 80%;
+    display: block;
+}
+
+ul{
+    font-weight: bold;
+}
+
+ol {
+    font-weight: bold;
 }
