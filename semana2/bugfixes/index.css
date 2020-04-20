@@ -31,6 +31,7 @@ img {
 
 div>p:first-child {
     display: inline;
+    
 }
 
 div img {
@@ -71,11 +72,13 @@ div img {
 #container-de-descricao {
     background-color: #2274a5;
     color: white;
-    padding: 100px 0px 0px 100px;
+    padding: 100px 0px 0px 0px;
+    
 }
 
 #container-de-descricao>ol {
     padding: 15px 0px;
+    width:
 }
 
 #container-para-comprar {
@@ -86,6 +89,12 @@ div img {
     color: #c44f00;
     padding: 100px 0;
     font-size: 60px;
+}
+
+ol {
+    width:20%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -134,3 +143,5 @@ td button {
 #back-button:hover {
     background-color: #635a3d
 }
+
+
