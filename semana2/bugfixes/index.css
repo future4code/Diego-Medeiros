@@ -52,6 +52,12 @@ div img {
 
 .botao-amarelo:hover {
     background-color: #c44f00;
+
+}
+
+.botao-amarelo:focus {
+    outline: 0;
+    box-shadow: none;
 }
 
 .container {
@@ -80,7 +86,7 @@ div img {
 
 #container-de-descricao>ol {
     padding: 15px 0px;
-    width:
+    
 }
 
 #container-para-comprar {
@@ -117,6 +123,8 @@ div:last-child {
 table {
     width: 60%;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 td button {
@@ -131,6 +139,11 @@ td button:hover {
     background-color: #5e3d0b;
 }
 
+td button:focus {
+    outline:0;
+    box-shadow: none;
+}
+
 .container-do-search {
     margin-top: 20px;
     height: 100px;
@@ -142,6 +155,11 @@ input {
     border-bottom:2px solid black;
     border-left: 0px;
     border-right: 0px;
+}
+
+input:focus {
+    outline: 0;
+    box-shadow: none;
 }
 
 
@@ -160,6 +178,10 @@ input {
 }
 #back-button:active {
     color: white;
+}
+#back-button:focus {
+    outline: 0;
+    box-shadow: none;
 }
 
 
