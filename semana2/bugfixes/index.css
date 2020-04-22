@@ -68,6 +68,16 @@ div img {
 
 .icone {
     height: 15px;
+    width: 15px;
+    
+}
+
+.icone:hover {
+    opacity: 0.3;
+}
+
+.icone:active {
+    opacity: 1.0;
 }
 
 
@@ -171,6 +181,9 @@ input:focus {
     border-radius: 5px;
     font-size: 10px;
     color: black;
+    margin-right: auto;
+    margin-left: auto;
+    
 }
 
 #back-button:hover {
@@ -182,6 +195,14 @@ input:focus {
 #back-button:focus {
     outline: 0;
     box-shadow: none;
+}
+
+.posicao_back_button {
+    margin-top: 200px;
+    margin-left:auto;
+    margin-right: auto;
+    width: 100px;
+    
 }
 
 
