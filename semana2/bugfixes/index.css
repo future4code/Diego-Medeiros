@@ -1,0 +1,211 @@
+/** 
+  *
+  *  ESTILOS GERAIS 
+  *
+  **/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+
+h2 {
+    background-color: #fe7e02;
+    padding: 10px 5px 10px 5px;
+    color: white;
+    text-align: center;
+}
+
+input {
+    height: 20px;
+    width: 500px;
+}
+
+button:focus {
+    color: white;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+}
+
+div>p:first-child {
+    display: inline;
+    
+}
+
+div img {
+    background: transparent;
+}
+
+.botao-amarelo {
+    background-color: #ffaf43;
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    
+}
+
+.botao-amarelo:hover {
+    background-color: #c44f00;
+
+}
+
+.botao-amarelo:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.container {
+    height: 500px;
+    text-align: center;
+    
+}
+
+.icone {
+    height: 15px;
+    width: 15px;
+    
+}
+
+.icone:hover {
+    opacity: 0.3;
+}
+
+.icone:active {
+    opacity: 1.0;
+}
+
+
+/** 
+  *
+  *  ESTILOS HOME 
+  *
+  **/
+
+#container-de-descricao {
+    background-color: #2274a5;
+    color: white;
+    padding: 100px 0px 0px 0px;
+    
+}
+
+#container-de-descricao>ol {
+    padding: 15px 0px;
+    
+}
+
+#container-para-comprar {
+    background-color: #e7eb90;
+}
+
+#container-para-comprar>p {
+    color: #c44f00;
+    padding: 100px 0;
+    font-size: 60px;
+}
+
+ol {
+    width:20%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+/**
+  *
+  *  ESTILOS COMPRAR 
+  *
+  **/
+
+div:nth-child(2),
+div:last-child {
+    text-align: center;
+}
+
+table {
+    width: 40%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+}
+
+td button {
+    background-color: #fadf63;
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+td button:hover {
+    background-color: #5e3d0b;
+}
+
+td button:focus {
+    outline:0;
+    box-shadow: none;
+}
+
+.container-do-search {
+    margin-top: 20px;
+    height: 100px;
+    
+}
+
+input {
+    border-top: 0px;
+    border-bottom:2px solid black;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+input:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+
+#back-button {
+    background-color: white;
+    width: 100px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 10px;
+    color: black;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+#back-button:hover {
+    background-color: #635a3d
+}
+#back-button:active {
+    color: white;
+}
+#back-button:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.posicao_back_button {
+    margin-top: 200px;
+    margin-left:auto;
+    margin-right: auto;
+    width: 100px;
+    
+}
+
+
