@@ -95,3 +95,56 @@ order:-3
 align-self:flex-end
 }
 
+17 #pond {
+  display: flex;
+  align-items: flex-start;
+}
+
+.yellow {
+order:1;
+align-self:flex-end;
+}
+
+18 #pond {
+  display: flex;
+flex-wrap:wrap
+}
+
+19 #pond {
+  display: flex;
+flex-wrap:wrap;
+flex-direction:column;
+}
+
+20 #pond {
+  display: flex;
+flex-flow: column wrap
+}
+
+21 #pond {
+  display: flex;
+  flex-wrap: wrap;
+align-content:flex-start
+}
+
+22 #pond {
+  display: flex;
+  flex-wrap: wrap;
+align-content:flex-end;
+}
+
+23 #pond {
+  display: flex;
+  flex-wrap: wrap;
+flex-direction:column-reverse;
+align-content: center;
+}
+
+24 #pond {
+  display: flex;
+flex-flow:column-reverse wrap-reverse;
+justify-content:center;
+align-content:space-between
+
+}
+
