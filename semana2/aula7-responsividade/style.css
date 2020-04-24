@@ -1,77 +1,150 @@
-.container {
+
+
+
+.container3 {
     display:grid;
-    grid-template-columns: 2;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    
+    
 }
 
-.container2 {
+.container4 {
     display:grid;
-    grid-template-columns: 3;
-    grid-template-rows: 1;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    
+
 }
+
+.container5 {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    
+}
+
+
 .vermelho {
     background-color: red;
-    width:100%;
-    height:100%;
+    grid-column: 1/span 3;
+    grid-row: 1/2;
+    border:solid black 1px;
+    height:5vw
+    
 }
 
 .azul1 {
     background-color: blue;
-    width:50%;
-    height:50%;
-
+    width:25vw;
+    height:10vw;
+    grid-row: 1/3;
+    grid-column:1/2 ;
+    
+    
 }
 
 .amarelo2 {
     background-color: yellow;
-    width:50%;
-    height:50%;
+    width:25vw;
+    height:10vw;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    border:solid black 1px;
+   
 
 }
 
 .verde3 {
     background-color: green;
-    width:50%;
-    height:50%;
+    width:25vw;
+    height:10vw;
+    grid-column-start: 3;
+    grid-row-start: 1;
+    border:solid black 1px;
+    
 
 }
 
 .azul4 {
     background-color: blue;
-    width:50%;
-    height:50%;
+    width:25vw;
+    height:10vw;
+    grid-column-start: 1;
+    grid-row-start: 3;
+    border:solid black 1px;
+    
 
 }
 
 .amarelo5 {
     background-color: yellow;
-    width:50%;
-    height:50%;
+    width:25vw;
+    height:10vw;
+    grid-column-start: 2;
+    grid-row-start: 3;
+    border:solid black 1px;
+   
 
 }
 
 .verde6 {
     background-color: green;
-    width:50%;
-    height:50%;
+    width:25vw;
+    height:10vw;
+    grid-column-start: 3;
+    grid-row-start: 3;
+    border:solid black 1px;
+    
 
 }
 
 .preto7 {
     color:white;
     background-color: black;
-    width:50%;
-    height:50%;
+    width:40vw;
+    height:40vw;
+    grid-column: 1/3;
+    grid-row: 4/4;
+    
+    
 }
 
 .preto8 {
     color:white;
     background-color: black;
-    width:50%;
-    height:50%;
+    width:40vw;
+    height:40vw;
+    grid-column: 3/ span 4;
+    grid-row: 4/4;
+    
+    
+    
 }
 
-.preto9 {
-    color:black;
-    width:50%;
-    height:50%;
+.branco9 {
+    width:25vw;
+    height:10vw;
+    grid-column: 1/2;
+    grid-row-start: 5;
+    border:solid black 1px;
+
 }
+
+.branco10 {
+    width:25vw;
+    height:10vw;
+    grid-column: 2/3;
+    grid-row-start: 5;
+    border:solid black 1px;
+}
+
+.branco11 {
+    width:25vw;
+    height:10vw;
+    grid-column: 3/4;
+    grid-row-start: 5;
+    border:solid black 1px;
+
+}
+
