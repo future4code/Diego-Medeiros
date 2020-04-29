@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;    
+}
+
+body {
+    background-color: black;
+}
+header {
+    background-color: brown;
+    width:100%;
+    height:10vh;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    background-color: grey;
+    width:100%;
+    display: flex;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;    
+    
+}
+
+.container {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    
+    
+}
+
+.container1 {
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    
+    align-items: center;
+    justify-items: center;
+    row-gap: 10%;
+    column-gap: 10%;
+    
+}
+
+section > div {
+    width: 30vh;
+    height: 12vw;
+    border:solid red 2px;
+    color:yellowgreen;
+    font-size:3vh;
+    text-align: center;
+}
+
+img {
+    width: 30vh;
+    height: 10vw;
+}
+
+nav {
+    display: flex
+}
+
+video {
+    width:50vw;
+    height:50vh;
+    display: flex;
+    border: red solid 2px;    
+}
+
+.video {
+    color:yellowgreen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;         
+}
+
+
+button {
+    height: 100%;
+}
+
+h2 {
+    color:yellowgreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+
+
+
+
+/* celulares */
+@media screen and (min-device-width : 320px) and (max-device-width : 490px) {
+
+
+   
+    .container1 {
+        display:flex;
+        flex-direction:column;
+        margin-bottom: 20vh;
+        
+    }
+
+    section > div {            
+        width: 90vw;
+        height: 60vw;
+        margin:5%;
+                 
+    }
+    
+    img {
+        width: 90vw;
+        height: 50vw;
+        
+    }
+
+    .video {
+        color:yellowgreen;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+              
+    }
+
+    video {
+        width: 100vw;
+        height: 70vw;
+        border: red solid 2px;
+        border-radius: 30%;
+               
+    }
+
+    section > div {
+        border:none;
+    }
+
+    button {
+        height: 100%;
+    }
+
+    }
