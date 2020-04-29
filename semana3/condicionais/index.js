@@ -13,7 +13,8 @@
 3 - Mensagem de erro: "mensagem is not defined" .
 A mensagem ficou indefinida pois está fora do escopo das condições, colocando console.log(mensagem) dentro do escopo das condições no caso antes da útima chave, funcionaria normalmente.
 */
-
+/*
+4. A
 const numero1 = prompt("Digite um número:")
 const numero2 = prompt("Digite um segundo numero:")
 
@@ -23,5 +24,46 @@ if (numero2 > numero1) {
 else {
     console.log(numero1, numero2)
 }
+*/
+
+//4. B e C
+const numero1 = prompt("Digite um número:")
+const numero2 = prompt("Digite um segundo numero:")
+const numero3 = prompt("Digite um terceiro numero:")
+
+if (numero3 > numero2 && numero3 > numero1 && numero2 < numero1) {
+    console.log (numero3, numero1, numero2)
+}
+
+else if (numero3 > numero2 && numero3 > numero1 && numero2 > numero1) {
+    console.log (numero3, numero2, numero1)
+}
+
+else if (numero2 > numero1 && numero2 > numero3 && numero1 > numero3) {
+    console.log(numero2, numero1, numero3)    
+}
+
+else if (numero2 > numero1 && numero2 > numero3 && numero1 < numero3 ) {
+    console.log(numero2, numero3, numero1)
+}
+
+else if (numero1 > numero2 && numero1 > numero3 && numero3 > numero2){
+    console.log (numero1, numero3, numero2)
+}
+
+
+else if (numero1 === numero2 && numero1 == numero3) {
+    console.log ("Digite pelo menos um números diferente!")
+}
+
+else {
+    console.log(numero1, numero2, numero3)
+}
+
+
+//sem o ultimo else if, ele mostra todos os números sendo iguais
+//5 A
+//https://drive.google.com/open?id=1BxJacgvK41nSZKilXN2AoameiPlefEtq
+
 
 
