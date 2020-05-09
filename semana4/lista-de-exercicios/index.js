@@ -17,4 +17,14 @@ console.log(numeroMenor)
     d. true
     e. true
 
+3.  Não. Do jeito que está o código entra em loop infinito, faltou o incremento da variavel para que uma hora se chegue no resultado esperado. Retirei o = da condição para dar exatamente o numeros pares no resultado incluindo o zero, e adicionei o prompt para inserção do número.
+
+const quantidadeDeNumerosPares=prompt("Digite um numero:")
+let i = 0
+while(i < quantidadeDeNumerosPares) {
+  console.log(i*2)
+
+  i++
+}
 */
+
