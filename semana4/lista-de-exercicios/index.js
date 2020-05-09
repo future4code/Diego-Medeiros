@@ -26,5 +26,24 @@ while(i < quantidadeDeNumerosPares) {
 
   i++
 }
+
+4.
+function verificaTriangulo() {
+  let medida1 = prompt("Digite medida 1 do triangulo:")
+  let medida2 = prompt("Digite medida 2 do triangulo:")
+  let medida3 = prompt("Digite medida 3 do triangulo:")
+
+  if (medida1 === medida2 && medida1 === medida3 ) {
+    console.log(`Triangulo Equilátero`)
+  }
+  else if ((medida1 === medida2 && medida1 !== medida3) || (medida1 === medida3 && medida1 !== medida2) || (medida2 === medida3 && medida2 !== medida1) )
+    console.log(`Triangulo Isosceles`)
+  
+  else {
+    console.log(`Triangulo Escaleno`)
+  } 
+}
+verificaTriangulo()
 */
+
 
