@@ -44,6 +44,55 @@ function verificaTriangulo() {
   } 
 }
 verificaTriangulo()
+
+5.
+function comparacaoNumerica () {
+let numero1 = prompt("Digite um número:")
+let numero2 = prompt("Digite outro número:")
+let subtracao1 = numero1 - numero2
+let subtracao2 = numero2 - numero1
+
+
+if (numero1 < 0) {
+  console.log(`Numeros incompativeis por favor digite numeros positivos`)
+}
+
+if (numero2 < 0) {
+  console.log(`Numeros incompativeis por favor digite numeros positivos`)-50
+}
+
+if (numero1 > numero2) {
+  console.log(`O maior é: ${numero1}`)
+}
+if (numero2 > numero1) {
+  console.log(`O maior é: ${numero2}`)
+}
+
+if (numero1 % numero2 === 0 && numero2 % numero1 !== 0 ) {
+  
+  console.log(`${numero1} é divisivel por ${numero2}`)
+  console.log(`${numero2} não é divisivel por ${numero1}`)
+}
+else if (numero2 % numero1 === 0 && numero1 % numero2 !== 0 ) {
+  console.log(`${numero2} é divisivel por ${numero1}`)
+  console.log(`${numero1} não é divisivel por ${numero2}`)
+}
+
+else if (numero1 % numero2 !== 0 || numero2 % numero1 !==0){
+  console.log(`Números não divisiveis`)
+}
+
+else if (numero1 === numero2) {
+  console.log(`Números iguais, ${numero1} dividido por ${numero2}: ${numero1/numero2}` )
+}
+
+if (numero1 > numero2 && subtracao1 > 0){
+  console.log(`A diferença entres eles é ${subtracao1}`)
+}
+
+else if (numero1 < numero2 && subtracao2 > 0){
+  console.log(`A diferença entre eles é ${subtracao2}`)
+}
+}
+comparacaoNumerica()
 */
-
-
