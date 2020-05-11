@@ -1,4 +1,23 @@
 /*
+Interpretação de Código
+
+1. Converte o valor informado em dólar. Foi criada uma função que recebe o valor em reais e devolve o valor em dolár, nesse exemplo usando uma cotação de 5 reais teriamos a resposta no console de R$ 500.
+
+2. De acordo com a opção de investimento realiza a ação de multiplica o valor informado por outro valor especifico, e dá uma mensagem de alerta caso a opção informada esteja fora das opções disponiveis. 
+1 console.log = 165
+2 console.log = TIPO DE INVESTIMENTO INFORMADO INCORRETO!
+
+3. É criado 3 arrays, um com uma quantidade de numeros, e dois para separar esses numeros em dois conjuntos. Depois separa os numeros pares dos impares, criando uma condição para sepaarar os arrays.
+1 console.log = Quantidade de números, 14
+2 console.log = 6
+3 console.log = 8
+
+4. Esse código mostra o maior e o menor número dentro do array. A primeira comparação de numero infinito, concluo que qualquer comparação com a variavel Infinity, é ele mesmo, pois ela não recebeu nenhum valor ainda propriamente dito. Em ambas as comparações se usa o for of para percorrer o array e guardar o menor numero no caso do numero1 e o maior numero no numero2.
+1 console.log = -10
+2 console.log = 1590
+
+Lógica de Progrmação
+
 1. Podemos percorrer valores de uma lista, especificamente falando, de um array, podemos usar métodos de laço que é o for, for of e for each.  
 
 Nesse exemplo percorro todo o array "numeros" para achar os numeros menores de 7. 
