@@ -2,6 +2,14 @@ import React from 'react';
 import './App.css';
 import CardGrande from './components/CardGrande/CardGrande';
 import ImagemButton from './components/ImagemButton/ImagemButton';
+import CardPequeno from './components/CardPequeno/CardPequeno';
+import fotoPerfil from './eu.png';
+import fotoAti from './ati.png';
+import fotoGrande from './grande.png';
+import fotoMsb from './msb.jpg';
+import iconeEmail from './email.png';
+import iconeTelefone from './telefone.png';
+import iconeEndereco from './endereco.png';
 
 function App() {
   return (
@@ -9,9 +17,9 @@ function App() {
       <div className="page-section-container">
         <h2>Dados pessoais</h2>
         <CardGrande 
-          imagem="https://uploads-ssl.webflow.com/5d640f4558306be99cf47a0e/5dd57846babb597b77c6bb1d_PerfilFuture4_cor.png" 
-          nome="Astrodev" 
-          descricao="Oi, eu sou o Astrodev. Sou o chefe dos alunos da Labenu. Adoro pedir e-mails na sexta-feira e esperar os alunos responderem só para responder com uma bronca e dar mais trabalho para eles."
+          imagem={fotoPerfil} 
+          nome="Diego Messias" 
+          descricao="Graduado em redes de computadores pela Unibratec e estudante de desenvolvimento web full stack. Me interessei por tecnologia por causa da minha paixão por games, comecei em um curso de hardware, avançando até a formação de redes de computadores dentre outros cursos dentro da área. Agora exploro a área de desenvolvimento."
         />
         
         <ImagemButton 
@@ -23,15 +31,21 @@ function App() {
       <div className="page-section-container">
         <h2>Experiências profissionais</h2>
         <CardGrande 
-          imagem="https://s3.amazonaws.com/future4.com.br/static/headf4-c492117ca2373dc85ca81bf715b3dc2a.png" 
-          nome="Labenu" 
-          descricao="Formando desenvolvedores para o mercado de trabalho!" 
+          imagem={fotoMsb} 
+          nome="MSB INFORMÁTICA" 
+          descricao="Suporte técnico e venda de produtos de Informática" 
         />
         
         <CardGrande 
-          imagem="https://imagens.canaltech.com.br/empresas/4418.400.jpg" 
-          nome="NASA" 
-          descricao="Apontando defeitos." 
+          imagem={fotoAti}
+          nome="ATI - AGÊNCIA DE TECNOLOGIA DA INFORMAÇÃO DE PERNAMBUCO" 
+          descricao="Suporte técnico e administração de redes" 
+        />
+
+        <CardGrande 
+          imagem={fotoGrande} 
+          nome="COLÉGIO GRANDE PASSO" 
+          descricao="Suporte técnico, manutenção e administração de redes e dos sistemas internos da empresa" 
         />
       </div>
 
@@ -47,6 +61,23 @@ function App() {
           texto="Twitter" 
         />        
       </div>
+
+      <div className="infocontato">
+        <h2>Informações para contato</h2>
+        <CardPequeno
+          imagem={iconeEmail}
+          descricao="di__e__go@hotmail.com"
+        />
+        <CardPequeno
+          imagem={iconeTelefone}
+          descricao="99999-9999"
+        />
+        <CardPequeno
+          imagem={iconeEndereco}
+          descricao="Orgrimmar, Azeroth"
+        />          
+      </div>
+
     </div>
   );
 }
