@@ -1,0 +1,13 @@
+.info-contato {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  padding: 15px 30px;
+  margin: 10px auto;
+  
+}
+
+.info-contato > img {
+  width: 30px;
+  margin-right: 10px;
+}
