@@ -26,12 +26,24 @@ class App extends React.Component {
   };
 
   componentDidMount = () => {
+    if (localStorage.getItem("tarefasSalvas")) {
+      const tarefasArray = JSON.parse(localStorage.getItem("tarefasSalvas"));
+
+      console.log(tarefasArray);
+      this.setState({ tarefas: tarefasArray });
+    }
+  };
+
+  /* Como estava
+  componentDidMount = () => {
     const tarefasNoLocalStorage = localStorage.getItem("tarefasSalvas");
     const tarefasArray = JSON.parse(tarefasNoLocalStorage);
     console.log(tarefasNoLocalStorage);
     console.log(tarefasArray);
     this.setState({ tarefas: tarefasArray });
   };
+  
+  */
 
   componentDidUpdate = () => {
     const listaDeTarefas = this.state.tarefas;
