@@ -26,7 +26,7 @@ class App extends React.Component {
         `http://gateway.marvel.com/v1/public/characters?ts=1&apikey=${puk}&hash=f7a11e2810d03eb2a2ca83fc09c40557&nameStartsWith=${this.state.nomeHeroi}&limit=100`
       )
       .then((response) => {
-        this.setState({ herois: response.data.data.results });
+        this.setState({ herois: response.data.data.results, nomeHeroi: "" });
       })
       .catch((error) => {
         console.log(error);
