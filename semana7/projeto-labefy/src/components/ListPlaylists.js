@@ -133,8 +133,8 @@ export class ListPlaylist extends React.Component {
       },
     };
     const body = {
-      name: this.state.nomeBanda,
-      artist: this.state.nomeMusica,
+      name: this.state.nomeMusica,
+      artist: this.state.nomeBanda,
       url: "https://open.spotify.com/embed/track/" + this.state.url,
     };
     axios
@@ -230,7 +230,7 @@ export class ListPlaylist extends React.Component {
     const resultTracklist = this.state.playlistTracks.map((tracks) => {
       return (
         <h1>
-          Nome:&nbsp;{tracks.name}
+          Música:&nbsp;{tracks.name}
           <br></br>
           Banda:&nbsp;{tracks.artist}
           <br></br>
@@ -285,7 +285,7 @@ export class ListPlaylist extends React.Component {
         </p>
         <TelaPlay>
           <h3>Adiciona Música >> </h3>
-          <Label>Nome:</Label>
+          <Label>Música:</Label>
           <input
             placeholder="Nome da Música"
             value={this.state.nomeMusica}
