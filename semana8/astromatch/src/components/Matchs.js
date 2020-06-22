@@ -1,26 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import styled from "styled-components";
-import Paper from "@material-ui/core/Paper";
-
-const Imagem = styled.img`
-  width: 60px;
-  height: 60px;
-  border-radius: 50px;
-`;
-
-const Estilo = styled(Paper)`
-  display: flex;
-  position: fixed;
-  flex-direction: column;
-  margin: auto;
-  align-content: center;
-  align-items: center;
-  width: 30%;
-  height: 65vh;
-  margin-top: 10%;
-  margin-left: 35vw;
-`;
+import BackButton from "./imagens/step-backward.png";
+import { MainStyle, ImagemMatch, MatchesHeader, StyleButton } from "./styles";
 
 function Matchs(props) {
   const [matches, setMatches] = useState([]);
@@ -44,18 +25,21 @@ function Matchs(props) {
   const listMatches = matches.map((match) => {
     return (
       <div>
-        <Imagem src={match.photo}></Imagem>
+        <ImagemMatch src={match.photo}></ImagemMatch>
         <span>{match.name}</span>
       </div>
     );
   });
 
   return (
-    <Estilo>
-      <h2>Matches</h2>
+    <MainStyle>
+      <MatchesHeader>
+        <StyleButton src={BackButton} onClick={props.changeScreen} />
+        <h2>Matches</h2>
+      </MatchesHeader>
+
       <div>{listMatches}</div>
-      <button onClick={props.changeScreen}>Voltar</button>
-    </Estilo>
+    </MainStyle>
   );
 }
 
