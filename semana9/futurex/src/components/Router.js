@@ -7,6 +7,7 @@ import LoginPage from "./LoginPage";
 import CreateTripPage from "./CreateTripPage";
 import ListTripsPage from "./ListTripsPage";
 import TripDetailsPage from "./TripDetailsPage ";
+import DashBoardPage from "./DashBoardPage";
 
 function Router() {
   return (
@@ -21,13 +22,16 @@ function Router() {
         <Route exact path="/login">
           <LoginPage></LoginPage>
         </Route>
-        <Route exact path="/trips/create">
+        <Route exact path="/dashboard">
+          <DashBoardPage></DashBoardPage>
+        </Route>
+        <Route exact path="/dashboard/create">
           <CreateTripPage></CreateTripPage>
         </Route>
-        <Route exact path="/trips/list">
+        <Route exact path="/dashboard/list">
           <ListTripsPage></ListTripsPage>
         </Route>
-        <Route exact path="/trips/details">
+        <Route exact path="/dashboard/details">
           <TripDetailsPage></TripDetailsPage>
         </Route>
       </Switch>

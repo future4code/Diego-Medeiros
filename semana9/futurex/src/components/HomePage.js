@@ -3,12 +3,15 @@ import { useHistory } from "react-router-dom";
 
 function HomePage() {
   const history = useHistory();
+
   const goToLogin = () => {
     history.push("/login");
   };
+
   const goToApplicationForm = () => {
     history.push("/application-form");
   };
+
   return (
     <div>
       <h1>
