@@ -17,7 +17,7 @@ const Marvel = styled.div`
 class App extends React.Component {
   state = {
     herois: [],
-    nomeHeroi: "Spider",
+    nomeHeroi: "",
   };
 
   listaMarvel = () => {
@@ -26,24 +26,34 @@ class App extends React.Component {
         `http://gateway.marvel.com/v1/public/characters?ts=1&apikey=${puk}&hash=f7a11e2810d03eb2a2ca83fc09c40557&nameStartsWith=${this.state.nomeHeroi}&limit=100`
       )
       .then((response) => {
-        console.log(response.data.data.results);
-        this.setState({ herois: response.data.data.results });
-
-        console.log(this.state.herois);
+        this.setState({ herois: response.data.data.results, nomeHeroi: "" });
       })
       .catch((error) => {
         console.log(error);
       });
   };
 
+  nomeDigitado = (event) => {
+    const novoNomeDigitado = event.target.value;
+
+    this.setState({ nomeHeroi: novoNomeDigitado });
+  };
+
   render() {
     const nomesHerois = this.state.herois.map((nomesHerois) => {
-      return <p>{nomesHerois.name}</p>;
+      return <p key={nomesHerois.id}>{nomesHerois.name}</p>;
     });
 
     return (
       <Marvel>
-        <button onClick={this.listaMarvel}>SPIDER-MARVEL</button>
+        <h1>BUSQUE HERÓIS DA MARVEL</h1>
+
+        <input
+          placeholder="Digite Herói para Buscar"
+          value={this.state.nomeHeroi}
+          onChange={this.nomeDigitado}
+        ></input>
+        <button onClick={this.listaMarvel}>BUSCAR HERÓI</button>
         <strong>{nomesHerois}</strong>
       </Marvel>
     );
