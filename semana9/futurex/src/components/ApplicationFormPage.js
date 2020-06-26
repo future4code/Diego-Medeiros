@@ -34,9 +34,10 @@ function ApplicationFormPage() {
       profession: form.profissao,
       country: form.nacao,
     };
+    console.log(body);
     axios
       .post(
-        `https://us-central1-labenu-apis.cloudfunctions.net/labeX/diego-messias-mello/trips/${form.tripId}/apply`,
+        `https://us-central1-labenu-apis.cloudfunctions.net/labeX/diego-messias-mello/trips/6r2Tzuc9JNbRy4NNa1iu/apply`,
         body
       )
       .then((response) => {
@@ -64,14 +65,6 @@ function ApplicationFormPage() {
     event.preventDefault();
     ApplyToTrip();
   };
-
-  const viagensID = tripsId.map((id) => {
-    return (
-      <select>
-        <option>{id.id}</option>
-      </select>
-    );
-  });
 
   console.log(form);
 
@@ -115,19 +108,12 @@ function ApplicationFormPage() {
           <option value="Albânia">Albânia</option>
           <option value="Alemanha">Alemanha</option>
         </select>
-        <input
-          required
-          name="tripId"
-          value={form.tripId}
-          placeholder="TripId"
-          onChange={handleInputChange}
-        ></input>
+
         <div>
           <button type="submit">Enviar</button>
         </div>
       </Form>
       <button onClick={getTrips}>testeGet</button>
-      {viagensID}
     </div>
   );
 }
