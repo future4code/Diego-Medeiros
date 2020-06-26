@@ -11,12 +11,12 @@ function LoginPage() {
     const token = window.localStorage.getItem("token");
 
     if (token !== null) {
-      history.push("/dashboard");
+      history.replace("/dashboard");
     }
   }, [history]);
 
   const goToDashBoard = () => {
-    history.push("/dashboard");
+    history.replace("/dashboard");
   };
 
   const Login = () => {
@@ -26,7 +26,7 @@ function LoginPage() {
     };
     axios
       .post(
-        "https://us-central1-labenu-apis.cloudfunctions.net/labeX/diego-messias/login",
+        "https://us-central1-labenu-apis.cloudfunctions.net/labeX/diego-messias-mello/login",
         body
       )
 

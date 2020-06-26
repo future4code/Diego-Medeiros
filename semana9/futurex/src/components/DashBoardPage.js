@@ -1,26 +1,18 @@
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import useAuthorization from "../hooks/useAuthorization";
 
 function DashBoardPage() {
-  const history = useHistory();
   const token = window.localStorage.getItem("token");
-
-  useEffect(() => {
-    const token = window.localStorage.getItem("token");
-
-    if (token === null) {
-      alert("Faça Login");
-      history.push("/login");
-    }
-  }, [history]);
-
+  const history = useHistory();
+  useAuthorization();
   const logout = () => {
     // Limpa tudo
     window.localStorage.clear();
 
     // Limpa só um campo.
     // window.localStorage.removeItem("token");
-    history.push("/login");
+    history.replace("/login");
   };
 
   const goToDetails = () => {

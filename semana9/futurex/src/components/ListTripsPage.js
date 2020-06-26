@@ -1,7 +1,8 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import useAuthorization from "../hooks/useAuthorization";
 
 function ListTripsPage() {
+  useAuthorization();
   return (
     <div>
       <h1>
