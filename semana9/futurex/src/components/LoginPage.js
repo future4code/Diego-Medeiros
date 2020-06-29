@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+import Helmet from "react-helmet";
+import { Body, Body2 } from "./styles";
+import { Button } from "@material-ui/core";
 
 function LoginPage() {
   const [newLogin, setNewLogin] = useState();
   const [newPassword, setNewPassword] = useState();
   const history = useHistory();
+  const goBack = () => {
+    history.goBack();
+  };
 
   useEffect(() => {
     const token = window.localStorage.getItem("token");
-
     if (token !== null) {
       history.replace("/dashboard");
     }
@@ -48,20 +53,45 @@ function LoginPage() {
     setNewPassword(event.target.value);
   };
 
-  console.log(newLogin);
-  console.log(newPassword);
-
   return (
-    <div>
+    <Body>
+      <Helmet title="Login" />
       <h1>
-        <div>Login!</div>
+        <div>Login</div>
       </h1>
       <div>
-        <input value={newLogin} onChange={handleLogin}></input>
-        <input value={newPassword} onChange={handlePassword}></input>
+        <input
+          type="text"
+          value={newLogin}
+          onChange={handleLogin}
+          placeholder="LOGIN"
+        ></input>
+        <input
+          type="password"
+          value={newPassword}
+          onChange={handlePassword}
+          placeholder="SENHA"
+        ></input>
       </div>
-      <button onClick={Login}>LOGIN</button>
-    </div>
+      <div>
+        <Button
+          onClick={Login}
+          variant="contained"
+          color="primary"
+          size="large"
+        >
+          LOGIN
+        </Button>
+        <Button
+          onClick={goBack}
+          variant="contained"
+          color="secondary"
+          size="large"
+        >
+          Voltar
+        </Button>
+      </div>
+    </Body>
   );
 }
 

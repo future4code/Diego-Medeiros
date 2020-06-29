@@ -1,5 +1,8 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import Helmet from "react-helmet";
+import { Body, Body2 } from "./styles";
+import { Button } from "@material-ui/core";
 
 function HomePage() {
   const history = useHistory();
@@ -14,11 +17,28 @@ function HomePage() {
 
   return (
     <div>
-      <h1>
-        <div>Home</div>
-      </h1>
-      <button onClick={goToLogin}>Login</button>
-      <button onClick={goToApplicationForm}>Formulario</button>
+      <Helmet title="Home" />
+      <Body>
+        <h1>Home</h1>
+      </Body>
+      <Body2>
+        <Button
+          variant="contained"
+          color="primary"
+          size="large"
+          onClick={goToLogin}
+        >
+          Login
+        </Button>
+        <Button
+          onClick={goToApplicationForm}
+          variant="contained"
+          color="secondary"
+          size="large"
+        >
+          Formulario
+        </Button>
+      </Body2>
     </div>
   );
 }

@@ -1,6 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import axios from "axios";
+import Countrys from "./Countrys";
+import Helmet from "react-helmet";
+import useForm from "../hooks/useForm";
+import { useHistory } from "react-router-dom";
+import { Body, Body2 } from "./styles";
+import { Button } from "@material-ui/core";
 
 const Form = styled.form`
   display: flex;
@@ -9,19 +15,26 @@ const Form = styled.form`
 `;
 
 function ApplicationFormPage() {
-  const [form, setForm] = useState({});
+  //função e estado vindo do retorno do useForm, (o retorno dele é um objeto)
+  const { form, onChange, resetForm } = useForm({
+    nome: "",
+    idade: "",
+    nacao: "",
+    profissao: "",
+    pergunta: "",
+    tripId: "",
+  });
   const [tripsId, setTripsId] = useState([]);
-  //função onChange recebendo name e value como atributo do event.target, sendo chamada na linha *
-  const onChange = (name, value) => {
-    const newForm = { ...form, [name]: value };
-    setForm(newForm);
-  };
+  const history = useHistory();
+
+  useEffect(() => {
+    getTrips();
+  }, []);
 
   const handleInputChange = (event) => {
     //capturando apenas o name e value do event.target completo ( console.log (event.target) verá todo o conteúdo do event.target) , com a  destruturação
     const { name, value } = event.target;
-    console.log(event.target.name);
-    console.log(event.target.value);
+
     //chama a função onChange com name e value do event.target, como atributo
     onChange(name, value);
   };
@@ -34,14 +47,14 @@ function ApplicationFormPage() {
       profession: form.profissao,
       country: form.nacao,
     };
-    console.log(body);
+
     axios
       .post(
-        `https://us-central1-labenu-apis.cloudfunctions.net/labeX/diego-messias-mello/trips/6r2Tzuc9JNbRy4NNa1iu/apply`,
+        `https://us-central1-labenu-apis.cloudfunctions.net/labeX/diego-messias-mello/trips/${form.tripId}/apply`,
         body
       )
-      .then((response) => {
-        console.log(response);
+      .then(() => {
+        alert("Cadastrado com sucesso!");
       })
       .catch((error) => {
         console.log(error);
@@ -49,9 +62,10 @@ function ApplicationFormPage() {
   };
 
   const getTrips = () => {
-    axios(
-      "https://us-central1-labenu-apis.cloudfunctions.net/labeX/diego-messias/trips"
-    )
+    axios
+      .get(
+        "https://us-central1-labenu-apis.cloudfunctions.net/labeX/diego-messias-mello/trips"
+      )
       .then((response) => {
         setTripsId(response.data.trips);
       })
@@ -59,27 +73,35 @@ function ApplicationFormPage() {
         console.log(error);
       });
   };
-  console.log(tripsId);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     ApplyToTrip();
+    resetForm();
   };
 
-  console.log(form);
+  const goBack = () => {
+    history.goBack();
+  };
 
   return (
-    <div>
-      <div>Formulário de Inscrição</div>
+    <Body>
+      <Helmet title="Formulário de Inscrição" />
+      <h1>Formulário de Inscrição</h1>
       <Form onSubmit={handleSubmit}>
         <input
+          type="text"
           required
           name="nome"
           value={form.nome}
           placeholder="Nome"
           onChange={handleInputChange}
+          pattern="[A-Za-z]{3,}"
+          title="Nome com no mínimo 3 letras"
         ></input>
         <input
+          type="number"
+          min="18"
           required
           name="idade"
           value={form.idade}
@@ -87,6 +109,8 @@ function ApplicationFormPage() {
           onChange={handleInputChange}
         ></input>
         <input
+          type="text"
+          minlength="30"
           required
           name="pergunta"
           value={form.pergunta}
@@ -94,27 +118,51 @@ function ApplicationFormPage() {
           onChange={handleInputChange}
         ></input>
         <input
+          type="text"
+          minlength="10"
           required
           name="profissao"
           value={form.profissao}
           placeholder="Profissão"
           onChange={handleInputChange}
         ></input>
-        <select required name="nacao" onChange={handleInputChange}>
-          <option></option>
-          <option value="Brasil">Brasil</option>
-          <option value="Afeganistão">Afeganistão</option>
-          <option value="África do Sul">África do Sul</option>
-          <option value="Albânia">Albânia</option>
-          <option value="Alemanha">Alemanha</option>
+        <Countrys onChange={handleInputChange} value={form.nacao} />
+        <select
+          required
+          name="tripId"
+          value={form.tripId}
+          placeholder="TripId"
+          onChange={handleInputChange}
+        >
+          <option value="">Escolha a viagem</option>
+          {tripsId.map((id) => {
+            return (
+              <option value={id.id}>
+                {id.name}-{id.planet}
+              </option>
+            );
+          })}
         </select>
-
-        <div>
-          <button type="submit">Enviar</button>
-        </div>
+        <Body2>
+          <Button
+            variant="contained"
+            color="primary"
+            size="large"
+            type="submit"
+          >
+            Enviar
+          </Button>
+          <Button
+            variant="contained"
+            color="secondary"
+            size="large"
+            onClick={goBack}
+          >
+            Voltar
+          </Button>
+        </Body2>
       </Form>
-      <button onClick={getTrips}>testeGet</button>
-    </div>
+    </Body>
   );
 }
 
