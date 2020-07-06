@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
 import styled from "styled-components";
+import Button from "@material-ui/core/Button";
 
 const Estilo1 = styled.div`
   display: flex;
@@ -24,8 +25,6 @@ function App() {
   const selecionaDia = (event) => {
     setDia(event.target.value);
   };
-  console.log(tarefa);
-  console.log(dia);
 
   const criarTarefa = () => {
     const body = {
@@ -80,7 +79,13 @@ function App() {
       return (
         <div>
           <p>{lista.text}</p>
-          <button onClick={() => deletarTarefa(lista.id)}>Delete</button>
+          <Button
+            variant="contained"
+            color="secondary"
+            onClick={() => deletarTarefa(lista.id)}
+          >
+            Delete
+          </Button>
         </div>
       );
     }
@@ -91,7 +96,13 @@ function App() {
       return (
         <div>
           <p>{lista.text}</p>
-          <button onClick={() => deletarTarefa(lista.id)}>Delete</button>
+          <Button
+            variant="contained"
+            color="secondary"
+            onClick={() => deletarTarefa(lista.id)}
+          >
+            Delete
+          </Button>
         </div>
       );
     }
@@ -102,7 +113,13 @@ function App() {
       return (
         <div>
           <p>{lista.text}</p>
-          <button onClick={() => deletarTarefa(lista.id)}>Delete</button>
+          <Button
+            variant="contained"
+            color="secondary"
+            onClick={() => deletarTarefa(lista.id)}
+          >
+            Delete
+          </Button>
         </div>
       );
     }
@@ -113,7 +130,13 @@ function App() {
       return (
         <div>
           <p>{lista.text}</p>
-          <button onClick={() => deletarTarefa(lista.id)}>Delete</button>
+          <Button
+            variant="contained"
+            color="secondary"
+            onClick={() => deletarTarefa(lista.id)}
+          >
+            Delete
+          </Button>
         </div>
       );
     }
@@ -124,7 +147,13 @@ function App() {
       return (
         <div>
           <p>{lista.text}</p>
-          <button onClick={() => deletarTarefa(lista.id)}>Delete</button>
+          <Button
+            variant="contained"
+            color="secondary"
+            onClick={() => deletarTarefa(lista.id)}
+          >
+            Delete
+          </Button>
         </div>
       );
     }
@@ -135,7 +164,13 @@ function App() {
       return (
         <div>
           <p>{lista.text}</p>
-          <button onClick={() => deletarTarefa(lista.id)}>Delete</button>
+          <Button
+            variant="contained"
+            color="secondary"
+            onClick={() => deletarTarefa(lista.id)}
+          >
+            Delete
+          </Button>
         </div>
       );
     }
@@ -146,7 +181,13 @@ function App() {
       return (
         <div>
           <p>{lista.text}</p>
-          <button onClick={() => deletarTarefa(lista.id)}>Delete</button>
+          <Button
+            variant="contained"
+            color="secondary"
+            onClick={() => deletarTarefa(lista.id)}
+          >
+            Delete
+          </Button>
         </div>
       );
     }
@@ -154,28 +195,34 @@ function App() {
 
   return (
     <div className="App">
-      <div>PLANNER</div>
+      <h1>PLANNER</h1>
 
-      <label>Nova Tarefa:</label>
-      <input
-        value={tarefa}
-        type="text"
-        name="tarefa"
-        onChange={tarefaDigitada}
-        placeholder="Nova tarefa"
-      ></input>
-      <select value={dia} name="diaDaSemana" onChange={selecionaDia}>
-        <option>Escolha o Dia</option>
-        <option value="segunda">Segunda-Feira</option>
-        <option value="terça">Terça-Feira</option>
-        <option value="quarta">Quarta-Feira</option>
-        <option value="quinta">Quinta-Feira</option>
-        <option value="sexta">Sexta-Feira</option>
-        <option value="sabado">Sábado</option>
-        <option value="domingo">Domingo</option>
-      </select>
-
-      <button onClick={criarTarefa}>Criar Tarefa</button>
+      <label>
+        Nova Tarefa:
+        <input
+          value={tarefa}
+          type="text"
+          name="tarefa"
+          onChange={tarefaDigitada}
+          placeholder="Nova tarefa"
+        ></input>
+      </label>
+      <div>
+        <label htmlFor={"testeSelecionaDia"}>Selecione o dia:</label>
+        <select id={"testeSelecionaDia"} value={dia} onChange={selecionaDia}>
+          <option data-testid="selectDia">Escolha o Dia</option>
+          <option value="segunda">Segunda</option>
+          <option value="terça">Terça</option>
+          <option value="quarta">Quarta</option>
+          <option value="quinta">Quinta</option>
+          <option value="sexta">Sexta</option>
+          <option value="sabado">Sábado</option>
+          <option value="domingo">Domingo</option>
+        </select>
+      </div>
+      <Button variant="contained" color="primary" onClick={criarTarefa}>
+        Criar Tarefa
+      </Button>
 
       <Estilo1>
         <div>
