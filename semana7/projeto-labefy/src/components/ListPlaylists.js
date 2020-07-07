@@ -284,7 +284,7 @@ export class ListPlaylist extends React.Component {
           quer adicionar a música
         </p>
         <TelaPlay>
-          <h3>Adiciona Música >> </h3>
+          <h3>Adiciona Música </h3>
           <Label>Música:</Label>
           <input
             placeholder="Nome da Música"
