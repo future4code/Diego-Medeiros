@@ -12,6 +12,11 @@ function useForm(initialValues) {
     setForm(newForm);
   };
   console.log(form);
+  
+//Resetar valores do form
+const resetForm = () => {
+  setForm(initialValues);
+};
 
   // Retorna o form que contém as chaves e valores
   // e o onChange que permite avisar ao hook que
