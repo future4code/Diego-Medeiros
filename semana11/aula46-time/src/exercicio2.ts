@@ -20,3 +20,5 @@ const printAllEvents = (events: event[]): void => {
 };
 
 printAllEvents(allEvents);
+
+//B- Usando o new Date() , pois por padrão utiliza do fuso horário de Londres ou setando o moment para o fuso horario de Londres com utcOffset
