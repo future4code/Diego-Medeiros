@@ -9,4 +9,7 @@ export class Industry extends Place {
   ) {
     super(cep);
   }
+  public getMachinesQuantity = (): number => {
+    return this.machinesQuantity;
+  };
 }
