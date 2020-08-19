@@ -1,4 +1,7 @@
 import knex from "knex";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export class UserDatabase {
   private connection = knex({
@@ -17,13 +20,15 @@ export class UserDatabase {
   public async createUser(
     id: string,
     email: string,
-    password: string
+    password: string,
+    role: string
   ): Promise<void> {
     await this.connection
       .insert({
         id,
         email,
         password,
+        role,
       })
       .into(UserDatabase.TABLE_NAME);
   }
@@ -44,5 +49,9 @@ export class UserDatabase {
       .where({ id });
 
     return result[0];
+  }
+
+  public async deleteUser(id: string): Promise<void> {
+    await this.connection.delete().from(UserDatabase.TABLE_NAME).where({ id });
   }
 }
