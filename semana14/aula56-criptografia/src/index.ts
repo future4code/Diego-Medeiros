@@ -6,6 +6,7 @@ import { UserDatabase } from "./data/UserDatabase";
 import { Authenticator } from "./services/Authenticator";
 import HashManager from "./services/HashManager";
 import { Hash } from "crypto";
+import { BaseDataBase } from "./data/BaseDatabase";
 
 dotenv.config();
 
@@ -58,6 +59,7 @@ app.post("/signup", async (req: Request, res: Response) => {
       message: err.message,
     });
   }
+  await BaseDataBase.destroyConnection();
 });
 
 app.post("/login", async (req: Request, res: Response) => {
@@ -99,6 +101,7 @@ app.post("/login", async (req: Request, res: Response) => {
       message: err.message,
     });
   }
+  await BaseDataBase.destroyConnection();
 });
 
 app.get("/user/profile", async (req: Request, res: Response) => {
@@ -124,6 +127,7 @@ app.get("/user/profile", async (req: Request, res: Response) => {
       message: err.message,
     });
   }
+  await BaseDataBase.destroyConnection();
 });
 
 app.delete("/user/:id", async (req: Request, res: Response) => {
@@ -147,6 +151,7 @@ app.delete("/user/:id", async (req: Request, res: Response) => {
       message: err.message,
     });
   }
+  await BaseDataBase.destroyConnection();
 });
 
 const server = app.listen(process.env.PORT || 3003, () => {
@@ -181,4 +186,5 @@ app.get("/user/:id", async (req: Request, res: Response) => {
       message: err.message,
     });
   }
+  await BaseDataBase.destroyConnection();
 });

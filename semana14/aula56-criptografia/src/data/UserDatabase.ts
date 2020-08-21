@@ -1,20 +1,10 @@
 import knex from "knex";
 import dotenv from "dotenv";
+import { BaseDataBase } from "./BaseDatabase";
 
 dotenv.config();
 
-export class UserDatabase {
-  private connection = knex({
-    client: "mysql",
-    connection: {
-      host: process.env.DB_HOST,
-      port: 3306,
-      user: process.env.DB_USER,
-      password: process.env.DB_PASSWORD,
-      database: process.env.DB_DATABASE_NAME,
-    },
-  });
-
+export class UserDatabase extends BaseDataBase {
   private static TABLE_NAME = "User";
 
   public async createUser(
@@ -23,7 +13,7 @@ export class UserDatabase {
     password: string,
     role: string
   ): Promise<void> {
-    await this.connection
+    await this.getConnection()
       .insert({
         id,
         email,
@@ -34,7 +24,7 @@ export class UserDatabase {
   }
 
   public async getUserByEmail(email: string): Promise<any> {
-    const result = await this.connection
+    const result = await this.getConnection()
       .select("*")
       .from(UserDatabase.TABLE_NAME)
       .where({ email });
@@ -43,7 +33,7 @@ export class UserDatabase {
   }
 
   public async getUserById(id: string): Promise<any> {
-    const result = await this.connection
+    const result = await this.getConnection()
       .select("*")
       .from(UserDatabase.TABLE_NAME)
       .where({ id });
@@ -52,6 +42,9 @@ export class UserDatabase {
   }
 
   public async deleteUser(id: string): Promise<void> {
-    await this.connection.delete().from(UserDatabase.TABLE_NAME).where({ id });
+    await this.getConnection()
+      .delete()
+      .from(UserDatabase.TABLE_NAME)
+      .where({ id });
   }
 }
