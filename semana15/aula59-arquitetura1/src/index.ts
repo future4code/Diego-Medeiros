@@ -1,24 +1,24 @@
 import express, { Request, Response } from "express";
 import { AddressInfo } from "net";
+import { signup } from "./controller/signup";
+import { login } from "./controller/login";
+import { getAllUsers } from "./controller/getAllUsers";
+import dotenv from "dotenv";
+import { deleteUser } from "./controller/deleteUser";
 const app = express();
 app.use(express.json());
+dotenv.config();
 
-app.get("/teste", async (req: Request, res: Response) => {
-
-    try {
-        res.status(200).send("Oi, seu server está funcionando!");
-    } catch (error) {
-
-        res.status(400).send("ERRO");
-
-    }
-});
+app.put("/signup", signup);
+app.post("/login", login);
+app.get("/all", getAllUsers);
+app.delete("/:id", deleteUser);
 
 const server = app.listen(3000, () => {
-    if (server) {
-        const address = server.address() as AddressInfo;
-        console.log(`Server is running in http://localhost: ${address.port}`);
-    } else {
-        console.error(`Failure upon starting server.`);
-    }
+  if (server) {
+    const address = server.address() as AddressInfo;
+    console.log(`Server is running in http://localhost: ${address.port}`);
+  } else {
+    console.error(`Failure upon starting server.`);
+  }
 });
