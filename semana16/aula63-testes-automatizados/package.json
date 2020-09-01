@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node ./node_modules/jest/bin/jest.js"
+    "test": "node ./node_modules/jest/bin/jest.js",
+    "start": "ts-node ./src/Exercicio3.ts"
   },
   "author": "Diego Messias",
   "license": "ISC",
