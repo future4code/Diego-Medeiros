@@ -76,7 +76,7 @@ export function verifyAge(casino: Casino, users: User[]): Result {
 
 const user: User = {
   name: "Saruman",
-  age: 19,
+  age: 15,
   nacionality: NACIONALITY.BRAZILIAN,
 };
 
