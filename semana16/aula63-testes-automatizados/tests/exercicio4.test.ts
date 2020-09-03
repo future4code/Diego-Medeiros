@@ -20,7 +20,6 @@ describe("Testes da função do Exercicio3", () => {
     };
 
     const result = verifyAge(casino, [user]);
-    console.log(result);
 
     expect(result.brazilians.allowed).toEqual(["Saruman"]);
   });
@@ -38,7 +37,6 @@ describe("Testes da função do Exercicio3", () => {
     };
 
     const result = verifyAge(casino, [user]);
-    console.log(result);
 
     expect(result.americans.allowed).toEqual(["Gandalf"]);
   });
@@ -74,7 +72,6 @@ describe("Testes da função do Exercicio3", () => {
     };
 
     const result = verifyAge(casino, [user1, user2, user3, user4]);
-    console.log(result);
 
     expect(result).toEqual({
       brazilians: { allowed: [], unallowed: ["Saruman", "Gandalf"] },
@@ -113,7 +110,6 @@ describe("Testes da função do Exercicio3", () => {
     };
 
     const result = verifyAge(casino, [user1, user2, user3, user4]);
-    console.log(result);
 
     expect(result).toEqual({
       brazilians: { allowed: [], unallowed: ["Saruman", "Gandalf"] },

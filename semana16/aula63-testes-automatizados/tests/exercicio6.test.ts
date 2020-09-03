@@ -33,7 +33,6 @@ describe("Testes do banco de dados de Posts", () => {
       post.user_id
     );
     const postFromDb = await postDataBase.getPostById(post.id);
-    console.log(postFromDb);
 
     expect(postFromDb).toMatchObject({
       id: "008",

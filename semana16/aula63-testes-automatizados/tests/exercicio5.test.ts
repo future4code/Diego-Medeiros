@@ -20,7 +20,6 @@ describe("Testes da função do Exercicio3", () => {
     };
 
     const result = verifyAge(casino, [user]);
-    console.log(result);
 
     expect(result.brazilians.allowed.length).toBeGreaterThan(0);
     expect(result.brazilians.allowed.length).toBeLessThan(2);
@@ -39,7 +38,6 @@ describe("Testes da função do Exercicio3", () => {
     };
 
     const result = verifyAge(casino, [user]);
-    console.log(result);
 
     expect(result.americans.unallowed.length).toBe(0);
   });
@@ -75,7 +73,6 @@ describe("Testes da função do Exercicio3", () => {
     };
 
     const result = verifyAge(casino, [user1, user2, user3, user4]);
-    console.log(result);
 
     expect(result.brazilians.unallowed).toContain("Saruman");
     expect(result.americans.unallowed).toContain("Aragorn");
@@ -112,7 +109,6 @@ describe("Testes da função do Exercicio3", () => {
     };
 
     const result = verifyAge(casino, [user1, user2, user3, user4]);
-    console.log(result);
 
     expect(result.brazilians.unallowed.length).toBeGreaterThan(1);
     expect(result.americans.unallowed.length).toBeLessThan(1);
