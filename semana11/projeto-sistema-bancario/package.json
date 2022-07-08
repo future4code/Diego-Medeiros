@@ -12,7 +12,7 @@
   "dependencies": {
     "@types/axios": "^0.14.0",
     "@types/node": "^13.7.7",
-    "moment": "^2.27.0",
+    "moment": "^2.29.4",
     "ts-node": "^8.10.2",
     "ts-node-dev": "^1.0.0-pre.44",
     "typescript": "^3.9.7"
